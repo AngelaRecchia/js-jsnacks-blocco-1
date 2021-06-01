@@ -41,6 +41,7 @@
 
 // JSnack3
 // Crea un array vuoto. Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array
+
 // var nums = [];
 // var numero;
 // for ( var i = 0; i < 6; i++) {
@@ -54,3 +55,21 @@
 
 // JSnack4
 // In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby, chiedi all’utente il suo nome e comunicagli se può partecipare o no alla festa.
+
+var invitati = ["pluto", "pippo", "pinco", "panco"];
+var nome = prompt("Inserisci il tuo nome");
+var presente = false;
+
+var i = 0;
+while ( i < invitati.length && !presente ) {
+    if ( nome == invitati[i] ) {
+        presente = true;
+    }
+    i++;
+}
+
+if (presente) {
+        document.getElementById("text").innerHTML = "Sei nella lista.";
+} else {
+        document.getElementById("text").innerHTML = "Non sei nella lista.";
+}
